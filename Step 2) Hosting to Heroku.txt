@@ -1,0 +1,33 @@
+Using Heroku:
+Install heroku toolbelt in windows
+Inside the FlaskWebsite Folder, login to heroku using
+-> heroku login
+-> heroku create dewangsfirstflaskapp
+
+To upload files into heroku, we should use git
+3 Files are needed before we do anything-
+
+1) First we install gunicorn from the pip inside virtual\Scripts\pip (Gunicorn is an http server which is needed by heroku)
+Inside FlaskWebsite Directory create a requirements.txt to list all dependencies using -
+virtual\Scripts\pip freeze -> requirements.txt
+
+2) In the FlaskWebsite Directory, create Procfile (no extension)
+Inside the file type -
+web: gunicorn script1:app (telling heroku what web server to use, app: name of flask instance)
+
+3) Create runtime.txt in FlaskWebsite Directory, and specify the python runtime version-
+python-3.7.2
+
+Now, in FlaskWebsite Directory, open cmd
+-> git init (create empty git repository)
+-> git add . (add to current directory)
+-> git commit -m "notes"
+
+Point to an app in heroku -
+heroku git:remote --app dewangsfirstflaskapp
+
+To Push changes to heroku -
+git push heroku master
+
+Browse webpage-
+heroku open 

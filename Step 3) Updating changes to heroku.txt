@@ -1,0 +1,7 @@
+-> heroku login
+Check heroku app being pointed to -
+-> heroku info
+-> heroku git:remote --app dewangsfirstflaskapp
+-> git add .
+-> git commit -m "notes"
+-> git push heroku master

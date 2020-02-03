@@ -1,0 +1,8 @@
+Creating a virtual Environment:
+python -m venv virtual
+
+For our case, we need to install Flask:
+virtual\Scripts\pip install flask
+
+Run the app using the new virtual installation of python:
+virtual\Scripts\python FlaskWebsite\script1.py
